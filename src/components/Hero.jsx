@@ -14,7 +14,7 @@ export const Hero = () => {
                         </h1>
                         
                         <p className="text-lg md:text-l text-muted-foreground max-2-1xl mx-auto opacity-0 animate-fade-in-delay-3">
-                            Motivated full-stack developer with hands-on experience in HTML, CSS, JavaScript, Java, JavaFX, JSF, and MySQL.
+                            Motivated and creative full-stack developer.
                             Currently I'm seeking a working student position opportunity to deepen my practical skills and continue growing in full-stack development.
                         </p>
 
