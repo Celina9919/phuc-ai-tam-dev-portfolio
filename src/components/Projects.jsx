@@ -43,6 +43,7 @@ const projects = [
         description:"My personal portfolio website featuring projects, technical skills, and work in development and technology.",
         image:"/projects/project4.png",
         demoUrl: "#hero",
+        githubUrl:"https://github.com/Celina9919/phuc-ai-tam-dev-portfolio.git"
     }
 ];
 
