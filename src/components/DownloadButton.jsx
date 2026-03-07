@@ -8,7 +8,7 @@ const DownloadButton = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2 }}
-      className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 gap-2 inline-flex items-center"
+      className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 gap-2 inline-flex items-center justify-center"
     >
       Download CV
       <iconify-icon
