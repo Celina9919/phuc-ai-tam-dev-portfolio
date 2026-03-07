@@ -1,5 +1,7 @@
 import { ArrowRight, Filter, ExternalLink, Github } from "lucide-react";
 import { useMemo, useState, useRef, useEffect } from "react";
+import nostalSpielVideo from "@/assets/NostalSpiel.mp4";
+import "iconify-icon";
 
 const projects = [
     {
@@ -9,7 +11,6 @@ const projects = [
         tags: ["Java", "JavaFX", "IntelliJ", "Gitlab"],
         description:"A game desktop application with classic games such as Stone Paper Scissors, Guessing Number.",
         image:"/projects/project1.png",
-        demoUrl: "@/assets/NostalSpiel.mp4",
         githubUrl:"https://github.com/Celina9919/Nostal-Spiel.git",
     },
 
@@ -20,7 +21,7 @@ const projects = [
         tags: ["HTML", "CSS", "VS Code", "Gitlab"],
         description:"A Clone PlayStation 5 Clone Website with the purpose of cooperation with Cleverbridge regarding the healthcare aspect.",
         image:"/projects/project2.png",
-        demoUrl: "play-station-5-clone.vercel.app",
+        demoUrl: "https://play-station-5-clone.vercel.app",
         githubUrl:"https://github.com/Celina9919/PlayStation-5-Clone.git",
     },
 
@@ -31,8 +32,7 @@ const projects = [
         tags:["Figma"],
         description:"A mobile weather application for students living in the dorm in Aschaffenburg.",
         image:"/projects/project3.png",
-        demoUrl: "#",
-        githubUrl:"#",
+        figmaUrl: "https://www.figma.com/design/rLMI5ItkTGYLcMmqtykI2c/CampusSky",
     },
 
     {
@@ -217,27 +217,39 @@ export const Projects = () => {
                 <p className="text-muted-foreground text-sm line-clamp-2 text-justify">
                   {project.description}
                 </p>
-                 <div className="flex justify-between items-center mt-5">
+                 <div className="flex justify-between items-center mt-5 relative z-20">
                   <div className="flex space-x-5">
-                    {project.demoUrl && (
+
+                    {project.demoUrl && project.demoUrl !== "#" && (
                       <a
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        className="relative z-20 text-foreground/80 hover:text-primary transition-colors duration-300"
                       >
                         <ExternalLink size={22} />
                       </a>
                     )}
 
-                    {project.githubUrl && (
+                    {project.githubUrl && project.githubUrl !== "#" && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        className="relative z-20 text-foreground/80 hover:text-primary transition-colors duration-300"
                       >
                         <Github size={22} />
+                      </a>
+                    )}
+
+                    {project.figmaUrl && (
+                      <a
+                        href={project.figmaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <iconify-icon icon="logos:figma" width="20" height="20"></iconify-icon>
                       </a>
                     )}
                   </div>
