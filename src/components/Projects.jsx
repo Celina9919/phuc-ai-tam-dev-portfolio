@@ -1,4 +1,4 @@
-import { ArrowRight, Filter } from "lucide-react";
+import { ArrowRight, Filter, ExternalLink, Github } from "lucide-react";
 import { useMemo, useState, useRef, useEffect } from "react";
 
 const projects = [
@@ -7,8 +7,10 @@ const projects = [
         title: "NostalSpiel ",
         year: "2024",
         tags: ["Java", "JavaFX", "IntelliJ", "Gitlab"],
-        description:"",
-        image:"/projects/project1.png"
+        description:"A game desktop application with classic games such as Stone Paper Scissors, Guessing Number.",
+        image:"/projects/project1.png",
+        demoUrl: "@/assets/NostalSpiel.mp4",
+        githubUrl:"https://github.com/Celina9919/Nostal-Spiel.git",
     },
 
     {
@@ -16,8 +18,10 @@ const projects = [
         title: "PlayStation 5 Clone",
         year: "2024",
         tags: ["HTML", "CSS", "VS Code", "Gitlab"],
-        description:" ",
-        image:"/projects/project2.png"
+        description:"A Clone PlayStation 5 Clone Website with the purpose of cooperation with Cleverbridge regarding the healthcare aspect.",
+        image:"/projects/project2.png",
+        demoUrl: "play-station-5-clone.vercel.app",
+        githubUrl:"https://github.com/Celina9919/PlayStation-5-Clone.git",
     },
 
     {
@@ -25,8 +29,10 @@ const projects = [
         title: "Campus Sky",
         year: "2025",
         tags:["Figma"],
-        description:" ",
-        image:"/projects/project3.png"
+        description:"A mobile weather application for students living in the dorm in Aschaffenburg.",
+        image:"/projects/project3.png",
+        demoUrl: "#",
+        githubUrl:"#",
     },
 
     {
@@ -34,9 +40,9 @@ const projects = [
         title: "Personal Website Portfolio",
         year: "2026",
         tags:["Vite", "ReactJS", "TailwindCSS"],
-        description:" ",
+        description:"My personal portfolio website featuring projects, technical skills, and work in development and technology.",
         image:"/projects/project4.png",
-        demoUrl: "#hero"
+        demoUrl: "#hero",
     }
 ];
 
@@ -207,10 +213,35 @@ export const Projects = () => {
                   ))}
                 </div>
 
-                <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm line-clamp-2">
+                <h3 className="font-semibold text-lg mb-1 text-justify">{project.title}</h3>
+                <p className="text-muted-foreground text-sm line-clamp-2 text-justify">
                   {project.description}
                 </p>
+                 <div className="flex justify-between items-center mt-5">
+                  <div className="flex space-x-5">
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={22} />
+                      </a>
+                    )}
+
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <Github size={22} />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
