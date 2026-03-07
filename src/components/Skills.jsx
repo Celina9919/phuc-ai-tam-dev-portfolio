@@ -182,7 +182,16 @@ export const Skills = () => {
                         {filteredSkills.map((skill, key) => (
                             <div 
                                 key={key}
-                                className="bg-card p-6 rounded-lg shadow-xs card-hover flex flex-col items-center text-center"
+                                className="bg-card p-6 shadow-xs card-hover flex flex-col items-center text-center
+                                    group relative overflow-hidden rounded-xl border border-border text-foreground
+                                    transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg
+                                    before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
+                                    before:bg-[linear-gradient(110deg,transparent_0%,var(--shine-45)_45%,var(--shine-50)_50%,var(--shine-45)_55%,transparent_100%)]
+                                    before:bg-[length:200%_100%]
+                                    before:bg-[position:-150%_0]
+                                    before:opacity-0 before:transition-[opacity,background-position] before:duration-[1200ms]
+                                    hover:before:opacity-100 hover:before:bg-[position:150%_0]
+                                "
                             >   
                                 <div className="flex justify-center gap-4 mb-2">
                                     {skill.icons?.map((icon, i) => (
@@ -198,14 +207,6 @@ export const Skills = () => {
 
                                 <div className="text-center mb-4">
                                     <h3 className="font-semibold text-lg"> {skill.name} </h3>
-                                </div>
-
-                                <div 
-                                    className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                                    <div 
-                                        className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                                        style={{width: skill.level + "%" }}
-                                    />
                                 </div>
                             </div>
                         ))}
