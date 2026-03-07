@@ -1,5 +1,6 @@
 import { Code, User, Lightbulb } from "lucide-react";
 import avatar from "@/assets/avatar.png";
+import DownloadButton from "./DownloadButton";
 
 export const About = () => {
     
@@ -37,9 +38,7 @@ export const About = () => {
                             {" "}
                             Work With Me
                         </a>
-                        <a href="#" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
-                            Download CV
-                        </a>
+                        <DownloadButton />
                     </div>
                 </div>
 
