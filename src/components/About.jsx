@@ -26,7 +26,7 @@ export const About = () => {
                     <h3 className="text-xl md:text-2xl font-semibold text-justify animate-fade-in">Highly Motivated Developer With User-Centric Mindset and Tech Savvy</h3>
                     <p className="text-muted-foreground mt-4 text-justify">
                         I am a highly motivated developer with a user-centric mindset and a passion for technology. 
-                        I focus on creating responsive, accesible and functional web application using modern technologies.
+                        I focus on creating responsive, accesible and functional application using modern technologies.
                     </p>
 
                     <p className="text-muted-foreground mt-4 text-justify">
