@@ -36,7 +36,7 @@ const timelineElements = [
     company: "University of Economics and Law",
     location: "Ho Chi Minh City, Vietnam",
     description:
-      "Online Course in Magical Beasts and Wonders of the World - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
+      "Bachelor of Science. Specialization: International Business",
     date: "September 2017 - Apr 2021",
     icon: "school",
   },
